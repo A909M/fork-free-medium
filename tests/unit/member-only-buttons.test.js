@@ -129,7 +129,7 @@ describe("Member-only button functionality", () => {
     expect(inlineButton.className).toBe('free-medium__read-free-button');
     expect(inlineButton.textContent).toBe('Read for free');
     expect(inlineButton.style.padding).toBe('8px 16px');
-    expect(inlineButton.style.backgroundColor).toBe('rgb(0, 123, 255)'); // Browser converts #007bff to rgb
+    expect(rgbToHex(inlineButton.style.backgroundColor)).toBe('#007bff'); // Compare hex value directly
     expect(inlineButton.style.display).toBe('block');
   });
 
