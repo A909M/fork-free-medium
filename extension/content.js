@@ -82,7 +82,7 @@ document.addEventListener("readystatechange", (event) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
         // Check if any new member-only buttons were added
-        setTimeout(() => addReadFreeButtonsAfterMemberOnly(), 100);
+        addReadFreeButtonsAfterMemberOnly();
       }
     });
   });
